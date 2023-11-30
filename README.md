@@ -132,7 +132,16 @@ note the results for each alpha case.
 
 R2_score is calculated on the predicted data for all values of `Alpha` and respective `model coefficients` are noted for each alpha iteration. 
 
-Plot between the features and respective coefficients, will give us the clear understanding of feature shrinkage to zero at different `Alpha's`. 
+Plot between the features and respective coefficients, will give us the clear understanding of feature shrinkage to zero at different `Alpha's`.  Below are the plots
+
+<img src="./results/plt1.jpg" width="900" height="300"/>
+
+<img src="./results/plt2.jpg" width="900" height="300"/>
+
+<img src="./results/plt3.jpg" width="900" height="300"/>
+
+
+
 
 ### Dimensionality Reduction 
 

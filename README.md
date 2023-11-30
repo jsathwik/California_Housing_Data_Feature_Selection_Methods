@@ -1,3 +1,5 @@
+ ![plot](./results/filter.jpg)
+
 # Feature Selection on California Housing Price Prediction 🏠🏠
 
 Project aims to build regression models by including the `Feature Selection Techniques` like `Filter based methods`, `Wrapper methods`, `Embedded Methods` and `Dimensionality Reduction Techniques ` like `Principal Component Analysis (PCA)`. The main theme here is to reduce the complexity of the model and improve the efficiency of the models using these techniques.

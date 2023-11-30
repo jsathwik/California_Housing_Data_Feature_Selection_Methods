@@ -148,3 +148,97 @@ As Final step generate train test split on `X_new`, `Y` and proceed with Regress
 
 ## Evaluation and Results 🔍
 
+| Metric        | Value         |
+| ------------- | ------------- |
+| R2 Score      | 0.57          |
+
+The above table gives the R2_score of the Simple Regression model (with all features included).
+
+Below table gives `r2_scores` obtained using various feature selection Methods
+
+|Feature Selection method Used| R2_score|No. of Features|
+|------------------------|---------|----------------|
+|`SelectKBest`             |   0.57      |4|
+|`SelectPercentile`      |   0.57      |4|
+|`f_Regression`            |   0.57      |6|
+|`Correlation Techniques`  |   0.50      |6|
+|`Recursive Feature Elimination (RFE)`|   0.25      |3|
+|`Sequential Feature Selection`              |   0.50      |4|
+|`L1 Regularization`             |   0.58      |7, Alpha=0.01|
+|`Principal Component Analysis`| 0.47          |4|
+
+It is evident from the r2_scores of most feature selection methods that complexity of the model was reduced while maintaining the r2_score.
+
+### Evaluation Conclusions
+
+1. `SelectKBest`, `SelectPercentile` reduced the model features to `half (4 features)` while maintaining the r2_score.
+2. `f_regression`, `Correlation techniques` methods have decreased the features to `6`. However only `f_regression` was able to maintain the r2_score while correlation techniques reduce it to `0.50`.
+3. `RFE` method has obtained `3 features` but r2_score was significantly reduced i;e `0.25`. `Sequential Feature Selector` method has done a decent job of bringing feature count to half with r2_score of `0.50`.
+4. `L1 Regularization` has increased r2_score by 0.01 i;e `0.58`, while ignoring only 1 feature at `Alpha` = `0.01`.
+5. `PCA` has reduced features to 4, its respective r2_score is `0.47`.
+
+## ⚡Key Takeaways⚡
+
+Good understanding of how various feature selection methods work. 
+
+Reducing the complexity of the models.
+
+## ❓ FAQs ❔
+
+#### What is Lasso regression used for?
+Lasso regression is used for eliminating automated variables and the selection of features. It adds penalty term to the cost function. This term is the absolute sum of the coefficients. As the value of coefficients increases from 0 this term penalizes, cause model, to decrease the value of coefficients in order to reduce loss. 
+
+#### How Recursive Feature Elimination works ?
+Recursive Feature Elimination works in the following steps:
+  1. Rank the importance of all features using the   chosen RFE machine learning algorithm.
+  2. Eliminate the least important feature.
+  3. Build a model using the remaining features.
+  4. Repeat steps 1-3 until the desired number of features is reached.
+
+#### What is SelectKBest ?
+
+`SelectKBest` is a type of filter-based feature selection method in machine learning.
+
+The feature selection process is done independently of any specific machine learning algorithm. Instead, it relies on statistical measures to score and rank the features.
+
+SelectKBest uses statistical tests like `chi-squared` test, `ANOVA` `F-test`, or mutual information score to score and rank the features based on their relationship with the output variable. 
+
+#### What is f_Regression ?
+`f_regression()` function is a feature selection strategy, such as selecting the top k most relevant features (largest values) via the SelectKBest class. The scikit-learn machine library provides an implementation of the correlation statistic in the f_regression()  function.
+
+#### What is Principal Component Analysis (PCA) ?
+
+The  `Principal Component Analysis (PCA)`  reduce's the dimensionality of a dataset while preserving the most important patterns or relationships between the variables without any prior knowledge of the target variables. 
+
+`Principal Component Analysis (PCA)` is used to reduce the dimensionality of a data set by finding a new set of variables, smaller than the original set of variables, retaining most of the sample’s information.
+
+#### What is Sequential Feature Selection ?
+
+`Sequential Feature Selector` is a feature selection based Wrapper method that adds (forward selection) or removes (backward selection) features to form a feature subset in a greedy fashion. At each stage, this estimator chooses the best feature to add or remove based on the cross-validation score of an estimator. 
+
+## Roadmap 🏁
+
+Perform `Hyperparameter tuning` of the parameters involved in the various feature_selection methods.
+
+Implementation of Decision tree model for the same problem statement
+
+## Acknowledgements 🙌
+
+[Recursive- Feature - elimination](https://www.analyticsvidhya.com/blog/2023/05/recursive-feature-elimination/)
+
+[Sequential-Feature- Selector](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html)
+
+[SelectKBest](https://medium.com/@Kavya2099/optimizing-performance-selectkbest-for-efficient-feature-selection-in-machine-learning-3b635905ed48)
+
+[Lasso Regression](https://www.analyticsvidhya.com/blog/2016/01/ridge-lasso-regression-python-complete-tutorial/)
+
+[Principal Component Analysis](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+
+## Contact
+
+If you have any feedback/are interested in collaborating, please reach out to me via [📧](sathwik.office@gmail.com)
+
+
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)

@@ -1,8 +1,10 @@
- ![plot](./results/filter.jpg)
+<img src="https://datascientest.com/en/wp-content/uploads/sites/9/2023/10/feature-engineering.webp" width="900" height="300"/>
+
 
 # Feature Selection on California Housing Price Prediction 🏠🏠
 
-Project aims to build regression models by including the `Feature Selection Techniques` like `Filter based methods`, `Wrapper methods`, `Embedded Methods` and `Dimensionality Reduction Techniques ` like `Principal Component Analysis (PCA)`. The main theme here is to reduce the complexity of the model and improve the efficiency of the models using these techniques.
+Project aims to build regression models by including the `Feature Selection Techniques` like `Filter based methods`, `Wrapper methods`, `Embedded Methods` and `Dimensionality Reduction Techniques ` like `Principal Component Analysis (PCA)`. The main theme here is to reduce the complexity of the model (number of features) and improve the efficiency of the models using these techniques. 
+
 
 ## Data 
 The California housing dataset consists of `20640` data points, with each datapoint having `8 features`. This dataset was obtained from the StatLib repository -
@@ -169,7 +171,7 @@ Below table gives `r2_scores` obtained using various feature selection Methods
 
 It is evident from the r2_scores of most feature selection methods that complexity of the model was reduced while maintaining the r2_score.
 
-### Evaluation Conclusions
+### 🔑 Evaluation Conclusions 💡
 
 1. `SelectKBest`, `SelectPercentile` reduced the model features to `half (4 features)` while maintaining the r2_score.
 2. `f_regression`, `Correlation techniques` methods have decreased the features to `6`. However only `f_regression` was able to maintain the r2_score while correlation techniques reduce it to `0.50`.
